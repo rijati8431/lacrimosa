@@ -1,0 +1,42 @@
+proxies:
+proxy-groups:
+  - name: Manual
+    type: select
+    proxies:
+      - SG Server
+      - ID Server
+  - name: SG Server
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - "1. SG Server"
+  - name: ID Server
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - "2. ID Server"
+proxy-providers:
+  "1. SG Server":
+    type: http
+    url: "https://raw.githubusercontent.com/arijatipermana/rolex/main/default/manual.yaml"
+    interval: 3600
+    path: /data/adb/clash/default/sgserver.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  "2. ID Server":
+    type: http
+    url: "https://raw.githubusercontent.com/arijatipermana/rolex/main/default/globalssh.yaml"
+    interval: 3600
+    path: /data/adb/clash/default/idserver.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+rules:
+  - IP-CIDR,127.0.0.1/32,REJECT,no-resolve
+  - IP-CIDR6,::1/128,REJECT,no-resolve
+  - MATCH,Manual
