@@ -20,7 +20,7 @@ proxy-groups:
 proxy-providers:
   "1. SG Server":
     type: http
-    url: "https://raw.githubusercontent.com/arijatipermana/rolex/main/default/manual.yaml"
+    url: "https://raw.githubusercontent.com/rijati8431/lacrimosa/main/default/sg_server.yaml?token=GHSAT0AAAAAACE5R7KOJKYQ7KENFCLHZC2UZFRZMZQ"
     interval: 3600
     path: /data/adb/clash/default/sgserver.yaml
     health-check:
@@ -29,7 +29,7 @@ proxy-providers:
       interval: 300
   "2. ID Server":
     type: http
-    url: "https://raw.githubusercontent.com/arijatipermana/rolex/main/default/globalssh.yaml"
+    url: "https://raw.githubusercontent.com/rijati8431/lacrimosa/main/default/id_server.yaml?token=GHSAT0AAAAAACE5R7KO5FWSPHM4YAUPZ34MZFRZTWQ"
     interval: 3600
     path: /data/adb/clash/default/idserver.yaml
     health-check:
