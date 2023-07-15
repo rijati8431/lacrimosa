@@ -15,19 +15,6 @@ proxies:
       headers:
         Host: sggs-sg01.ipv2ray.xyz
     udp: true
-  - name: SG | Free
-    server: 104.18.1.196
-    port: 80
-    type: trojan
-    password: 26a0b3b0-2331-11ee-9560-1239d0255272
-    skip-cert-verify: false
-    sni: sg-5.test3.net
-    network: ws
-    ws-opts: 
-      path: /howdy
-      headers: 
-        Host: sg-5.test3.net
-    udp: true
   - name: OVH | Free
     server: 104.18.1.196
     port: 80
@@ -43,5 +30,18 @@ proxies:
       path: /vmess-ws
       headers:
         Host: vmess-ovh-sg01.globalssh.xyz
+    udp: true
+  - name: SG | Free
+    server: 104.18.1.196
+    port: 80
+    type: trojan
+    password: 26a0b3b0-2331-11ee-9560-1239d0255272
+    skip-cert-verify: false
+    sni: sg-5.test3.net
+    network: ws
+    ws-opts: 
+      path: /howdy
+      headers: 
+        Host: sg-5.test3.net
     udp: true
 
