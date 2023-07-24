@@ -19,7 +19,7 @@ proxies:
     server: 104.18.1.196
     port: 80
     type: vmess
-    uuid: f9296d5e-e50b-4f79-924d-cf780a8ff3a6
+    uuid: 8d469632-0c8e-4b25-8e55-e2e334ed9ada
     alterId: 0
     cipher: auto
     tls: false
@@ -30,20 +30,4 @@ proxies:
       path: /vmess-ws
       headers:
         Host: vmess-ikd-id01.globalssh.xyz
-    udp: true
-  - name: HZ | 19/07
-    server: 104.18.1.196
-    port: 80
-    type: vmess
-    uuid: d273b300-2333-11ee-b730-205c6d5f5d78
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: id-1.0rd.net
-    network: ws
-    ws-opts: 
-      path: /wrbqk7fm
-      headers: 
-        Host: id-1.0rd.net
     udp: true
