@@ -3,7 +3,7 @@ proxies:
     server: 172.67.73.39
     port: 80
     type: vmess
-    uuid: ffd36191-d873-4956-a9f0-7bb718780470
+    uuid: 
     alterId: 0
     cipher: auto
     tls: false
